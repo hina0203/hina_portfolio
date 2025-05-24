@@ -1,86 +1,161 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ひなのポートフォリオ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="学生向けプチプラコスメ特集。1000円以下でかわいくなれるアイテムを紹介！">
+  <meta name="keywords" content="プチプラ, コスメ, 学生, メイク, 安い化粧品">
+  <meta name="author" content="hina0203">
+  <title>プチプラコスメ特集 | 学生におすすめ</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #fdf6f8;
-      color: #333;
+      font-family: "Helvetica", sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #fff0f5;
+      color: #333;
     }
 
     header {
-      background-color: #ffb6c1;
-      color: white;
-      padding: 30px;
+      background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+      padding: 60px 20px;
       text-align: center;
+      color: white;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-inner h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .header-inner p {
+      font-size: 1.1em;
     }
 
     section {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .project {
-      background: white;
-      border-radius: 10px;
       padding: 20px;
-      margin-bottom: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease-in-out;
     }
 
-    .project h2 {
-      margin-top: 0;
+    .product img {
+      max-width: 100%;
+      border-radius: 5px;
     }
 
-    .btn {
+    .buy-button {
       display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
       background-color: #ff69b4;
       color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
       text-decoration: none;
+      border-radius: 5px;
     }
 
-    .btn:hover {
-      background-color: #ff1493;
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slider .product {
+      flex: 0 0 300px;
+      scroll-snap-align: start;
     }
 
     footer {
+      background-color: #eee;
+      padding: 15px;
       text-align: center;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    form {
+      background: #fff;
       padding: 20px;
-      color: #999;
+      border-radius: 10px;
+      margin-top: 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>ひなのポートフォリオ</h1>
-  <p>制作したWebページをご紹介します</p>
+  <div class="header-inner">
+    <h1>💖 学生におすすめ！プチプラコスメ特集</h1>
+    <p>1000円以下でかわいくなれちゃう💄おすすめアイテムを紹介♪</p>
+  </div>
 </header>
 
 <section>
-  <div class="project">
-    <h2>🍰 Hinacafe ランディングページ</h2>
-    <p>カフェの紹介ページ。シンプルなデザインとHTML/CSSの基本構成で作成。</p>
-    <a href="https://hina0203.github.io/cafe2/" class="btn" target="_blank">ページを見る</a>
+  <div class="slider">
+    <div class="product">
+      <h2>チーク</h2>
+      <img src=ボトル.webp alt="チーク画像" />
+      <p>自然な発色で毎日メイクにも◎</p>
+      <a href="#" class="buy-button">購入する</a>
+    </div>
+    <div class="product">
+      <h2>リップ</h2>
+      <img src=ボトル.webp alt="リップ画像" />
+      <p>500円とは思えない神リップ！</p>
+      <a href="#" class="buy-button">購入する</a>
+    </div>
+    <div class="product">
+      <h2>アイライナー</h2>
+      <img src=ボトル.webp alt="アイライナー画像" />
+      <p>にじみにくくてコスパ最高！</p>
+      <a href="#" class="buy-button">購入する</a>
+    </div>
   </div>
 
-  <div class="project">
-    <h2>💄 プチプラコスメ特集LP</h2>
-    <p>学生向けにおすすめのコスメを紹介するページ。HTML/CSSで制作。</p>
-    <a href="https://hina0203.github.io/kosume/" class="btn" target="_blank">ページを見る</a>
-  </div>
+  <form action="https://formspree.io/f/xxxxxxxx" method="POST">
+    <h3>ご相談・お問合せ</h3>
+    <input type="text" name="name" placeholder="お名前" required>
+    <input type="email" name="email" placeholder="メールアドレス" required>
+    <textarea name="message" placeholder="メッセージ内容" required></textarea>
+    <button type="submit">送信する</button>
+  </form>
 </section>
 
 <footer>
-  © 2025 Hina. All rights reserved.
+  ご質問はInstagramのDMでも📩（@hina_cosme）
 </footer>
 
 </body>
